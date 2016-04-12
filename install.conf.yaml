@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.oh-my-zsh: oh-my-zsh
+    ~/.aliases: aliases
+    ~/.aliases.osx: aliases.osx
+    ~/.zshrc: zshrc
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [vim +PlugInstall +PlugClean +qall, Installing Vim plugins]

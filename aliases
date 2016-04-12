@@ -1,0 +1,26 @@
+#CSE 120
+alias ssh120="ssh cs120sal@ieng6.ucsd.edu"
+
+# Shortcuts
+alias d="cd ~/Dropbox"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias doc="cd ~/Documents"
+
+# Marco specific shortcuts
+alias auvsi="cd ~/Documents/AUVSI"
+alias school="cd ~/Dropbox/school"
+
+
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+alias localip="ipconfig getifaddr en0"
+
+# reload the shell
+alias reload="exec $SHELL -l"
+
+# load venv in current directory
+alias lvenv="source ./venv/bin/activate"
+
+# Include custom aliases
+[[ -f $HOME/.aliases.local ]] && source $HOME/.aliases.local
