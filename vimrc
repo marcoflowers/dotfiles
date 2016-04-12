@@ -1,11 +1,9 @@
 se nocompatible
 call plug#begin('~/.vim/plugged')
 
-Plug 'VundleVim/Vundle.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-"Plug 'Shougo/neocomplete'
 Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'scrooloose/syntastic'
@@ -20,7 +18,7 @@ filetype plugin indent on    " required
 """ Colors
 """"""""""
 syntax enable
-set background=dark
+"set background=dark
 colorscheme luna-term
 
 
@@ -98,3 +96,10 @@ set tabstop=4
 set softtabstop=4
 " autocomplete
 set ai 
+
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+if $TERM == "xterm-256color"
+    set t_Co=256
+endif

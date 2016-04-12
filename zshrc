@@ -86,7 +86,11 @@ export EDITOR='vim'
 
 # IF MAC
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "mac?"
     [[ -f $HOME/.aliases.osx ]] && source $HOME/.aliases.osx
+fi
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    export TERM="xterm-256color"
 fi
 
 
